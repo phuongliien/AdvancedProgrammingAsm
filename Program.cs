@@ -98,6 +98,7 @@ namespace ASM2
                                     {
                                         repeat = false;
                                     }
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("Invalid input!!");
@@ -108,7 +109,7 @@ namespace ASM2
                         break;
                     case 2:
                         int c2 = 0;
-
+                        Console.Clear();
                         do
                         {
                             Console.WriteLine("*************** Menu *****************");
@@ -131,19 +132,21 @@ namespace ASM2
                             switch (c2)
                             {
                                 case 1:
-
+                                    lec.AddLec(p);
+                                   
                                     break;
                                 case 2:
 
+                                    lec.ViewAllLEc(p);
                                     break;
                                 case 3:
-
+                                    lec.SearchLec(p);
                                     break;
                                 case 4:
-
+                                    lec.DeleteLec(p);
                                     break;
                                 case 5:
-
+                                    lec.UpdateLec(p);
                                     break;
                                 case 6:
 
@@ -159,7 +162,9 @@ namespace ASM2
                                     {
                                         repeat = false;
                                     }
+                                    Console.Clear();
                                     break;
+                                    
                                 default:
                                     Console.WriteLine("Invalid input!!");
                                     break;

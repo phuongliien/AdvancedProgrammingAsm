@@ -17,7 +17,7 @@ namespace ASM2
         {
             this.LecDept = dept;
         }
-        public void AddStd(List<Person> std)
+        public void AddLec(List<Person> lec)
         {
             Test t = new Test();
 
@@ -38,8 +38,8 @@ namespace ASM2
             base.Add();
             Console.Write("Enter Student batch: ");
             string b = Console.ReadLine();
-            std.Add(new Students(this.Id, this.Name, this.DoB, this.Email, this.Address, this.LecDept));
-
+            lec.Add(new Students(this.Id, this.Name, this.DoB, this.Email, this.Address, this.LecDept));
+            Console.Clear();
         }
         public new void ViewAllLEc(List<Person> lec)
         {
@@ -57,6 +57,7 @@ namespace ASM2
                     Console.WriteLine(lecture.Id + " | " + lecture.Name + "  | " + lecture.DoB + "| " + lecture.Email + "| " + lecture.Address + "| " + lecture.LecDept);
                 }
             }
+            Console.Clear();
 
         }
         public void SearchLec(List<Person> lec)
@@ -67,10 +68,11 @@ namespace ASM2
             }
             else
             {
-                Console.WriteLine("Enter Student name you want to search:");
+                Console.Write("Enter Student name you want to search:");
                 string name = Console.ReadLine();
 
                 base.PrintResult(lec);
+                Console.Clear();
             }
             
         }
@@ -84,6 +86,7 @@ namespace ASM2
             else
             {
                 base.Delete(lec);
+                Console.Clear();
             }
 
         }
@@ -96,6 +99,7 @@ namespace ASM2
             else
             {
                 base.Update(lec);
+                Console.Clear();
             }
         }
     }

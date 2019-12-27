@@ -93,7 +93,8 @@ namespace ASM2
             }
             else
             {
-                    Console.WriteLine(p[a].Id + "| " + p[a].Name + "| " + p[a].DoB + "| " + p[a].Email + "| " + p[a].Address + "| ");
+                Console.WriteLine("Here your information:");
+                Console.WriteLine(p[a].Id + "| " + p[a].Name + "| " + p[a].DoB + "| " + p[a].Email + "| " + p[a].Address + "| ");
                 
                 
             }
@@ -150,10 +151,11 @@ namespace ASM2
         }
         public virtual void Update(List<Person> p)
         {
-            
-                Console.Write("Enter the  ID of whom you want to update: ");
-                string id = Console.ReadLine();
-                int result = 0;
+
+            Console.Write("Enter the  ID of whom you want to update: ");
+            string id = Console.ReadLine();
+
+            int result = 0;
                 foreach (Person per in p)
                 {
                     if (per.Id == id)
