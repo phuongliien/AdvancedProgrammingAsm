@@ -37,7 +37,7 @@ namespace ASM2
             }
             base.Add();
             Console.Write("Enter Student batch: ");
-            string b = Console.ReadLine();
+            this.StdBatch = Console.ReadLine();
             std.Add(new Students(this.Id, this.Name, this.DoB, this.Email, this.Address, this.StdBatch));
 
         }
@@ -50,11 +50,12 @@ namespace ASM2
             }
             else
             {
-                Console.WriteLine("ID      |   Name |   Date of birth    |     Email     |Address|   Batch ");
+                Console.WriteLine("ID     |Name    |Date of birth|     Email| Address| Batch ");
+                Console.WriteLine("");
                 foreach (Person c in std)
                 {
                     Students s = c as Students;
-                    Console.WriteLine(s.Id + " | " + s.Name + "  | " + s.DoB + "| " + s.Email + "| " + s.Address + "| " + s.StdBatch);
+                    Console.WriteLine(s.Id + " |" + s.Name + "  | " + s.DoB + "| " + s.Email + "| " + s.Address + "| " + s.StdBatch);
                 }
             }
             
